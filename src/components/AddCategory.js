@@ -6,14 +6,17 @@ export const AddCategory = ({ setCategories }) => {
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
-    console.log('HandleInputChange llamado');
+    // console.log('HandleInputChange llamado');
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // console.log('HandleSubmit llamado', inputValue);
+
     if (inputValue.trim().length > 2) {
       setCategories((cats) => [inputValue, ...cats]);
+      // setCategories(11122);
       setInputValue('');
     }
   };
